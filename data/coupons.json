@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "code": "FAYROUZA10",
+    "discountType": "percentage",
+    "discountValue": 10,
+    "isActive": true
+  },
+  {
+    "id": 2,
+    "code": "WELCOME50",
+    "discountType": "fixed",
+    "discountValue": 50,
+    "isActive": true
+  }
+]

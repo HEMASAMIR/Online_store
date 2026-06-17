@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1781473073371",
+    "name": "Mahmoud",
+    "email": "mahmoudabdelhakim130@gmail.com",
+    "password": "8fea2f8b67f9d6c44e78c4c430e54beae50ca1561af1314d696af21d471d4338",
+    "isAdmin": true,
+    "createdAt": "2026-06-14T21:37:53.371Z"
+  },
+  {
+    "id": "1781617462000",
+    "name": "Kholoud",
+    "email": "kholoudkhaled1777@gmail.com",
+    "password": "e0f36f191297fef2224ca75dc1609f85c6543e494d996889ac81907af4f3a7dd",
+    "isAdmin": true,
+    "createdAt": "2026-06-16T17:53:00.000Z"
+  },
+  {
+    "id": "1781473343289",
+    "name": "NonAdmin",
+    "email": "user@gmail.com",
+    "password": "7d5b0c99e1d8a6aeb85f7dacde550c7356fb59e61a27f7a55e258501b5453ad4",
+    "isAdmin": false,
+    "createdAt": "2026-06-14T21:42:23.290Z"
+  }
+]
