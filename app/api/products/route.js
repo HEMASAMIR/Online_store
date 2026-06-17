@@ -1,41 +1,21 @@
 import { NextResponse } from "next/server";
-import fs from "fs/promises";
-import path from "path";
+import { readData, writeData } from "@/lib/dataStore";
 
 export const dynamic = "force-dynamic";
 
-const productsPath = path.join(process.cwd(), "data", "products.json");
+const PRODUCTS_FILE = "products.json";
+const REVIEWS_FILE = "reviews.json";
 
 async function readProducts() {
-  try {
-    const data = await fs.readFile(productsPath, "utf-8");
-    return JSON.parse(data);
-  } catch (error) {
-    console.error("Error reading products:", error);
-    return [];
-  }
+  return readData(PRODUCTS_FILE, []);
 }
 
 async function writeProducts(products) {
-  try {
-    await fs.writeFile(productsPath, JSON.stringify(products, null, 2), "utf-8");
-    return true;
-  } catch (error) {
-    console.error("Error writing products:", error);
-    return false;
-  }
+  return writeData(PRODUCTS_FILE, products);
 }
 
-const reviewsPath = path.join(process.cwd(), "data", "reviews.json");
-
 async function readReviews() {
-  try {
-    const data = await fs.readFile(reviewsPath, "utf-8");
-    return JSON.parse(data);
-  } catch (error) {
-    console.error("Error reading reviews:", error);
-    return [];
-  }
+  return readData(REVIEWS_FILE, []);
 }
 
 export async function GET() {

@@ -1,9 +1,8 @@
 import { NextResponse } from "next/server";
-import fs from "fs/promises";
-import path from "path";
+import { readData, writeData } from "@/lib/dataStore";
 import crypto from "crypto";
 
-const USERS_FILE = path.join(process.cwd(), "data", "users.json");
+const USERS_FILE = "users.json";
 
 // Admin emails - only these emails can access the admin panel
 const ADMIN_EMAILS = [
@@ -21,16 +20,11 @@ function hashPassword(password) {
 }
 
 async function getUsers() {
-  try {
-    const data = await fs.readFile(USERS_FILE, "utf-8");
-    return JSON.parse(data);
-  } catch {
-    return [];
-  }
+  return readData(USERS_FILE, []);
 }
 
 async function saveUsers(users) {
-  await fs.writeFile(USERS_FILE, JSON.stringify(users, null, 2), "utf-8");
+  return writeData(USERS_FILE, users);
 }
 
 export async function POST(request) {

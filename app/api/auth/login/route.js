@@ -1,9 +1,8 @@
 import { NextResponse } from "next/server";
-import fs from "fs/promises";
-import path from "path";
+import { readData, writeData } from "@/lib/dataStore";
 import crypto from "crypto";
 
-const USERS_FILE = path.join(process.cwd(), "data", "users.json");
+const USERS_FILE = "users.json";
 const ADMIN_EMAILS = [
   "mahmoudabdelhakim130@gmail.com",
   "kholoudkhaled1777@gmail.com"
@@ -19,12 +18,7 @@ function hashPassword(password) {
 }
 
 async function getUsers() {
-  try {
-    const data = await fs.readFile(USERS_FILE, "utf-8");
-    return JSON.parse(data);
-  } catch {
-    return [];
-  }
+  return readData(USERS_FILE, []);
 }
 
 export async function POST(request) {

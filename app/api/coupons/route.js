@@ -1,27 +1,16 @@
 import { NextResponse } from "next/server";
-import fs from "fs/promises";
-import path from "path";
+import { readData, writeData } from "@/lib/dataStore";
 
 export const dynamic = "force-dynamic";
 
-const couponsPath = path.join(process.cwd(), "data", "coupons.json");
+const COUPONS_FILE = "coupons.json";
 
 async function readCoupons() {
-  try {
-    const data = await fs.readFile(couponsPath, "utf-8");
-    return JSON.parse(data);
-  } catch {
-    return [];
-  }
+  return readData(COUPONS_FILE, []);
 }
 
 async function writeCoupons(coupons) {
-  try {
-    await fs.writeFile(couponsPath, JSON.stringify(coupons, null, 2), "utf-8");
-    return true;
-  } catch {
-    return false;
-  }
+  return writeData(COUPONS_FILE, coupons);
 }
 
 export async function GET(request) {

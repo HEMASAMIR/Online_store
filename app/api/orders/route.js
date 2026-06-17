@@ -1,29 +1,16 @@
 import { NextResponse } from "next/server";
-import fs from "fs/promises";
-import path from "path";
+import { readData, writeData } from "@/lib/dataStore";
 
 export const dynamic = "force-dynamic";
 
-const ordersPath = path.join(process.cwd(), "data", "orders.json");
+const ORDERS_FILE = "orders.json";
 
 async function readOrders() {
-  try {
-    const data = await fs.readFile(ordersPath, "utf-8");
-    return JSON.parse(data);
-  } catch (error) {
-    console.error("Error reading orders:", error);
-    return [];
-  }
+  return readData(ORDERS_FILE, []);
 }
 
 async function writeOrders(orders) {
-  try {
-    await fs.writeFile(ordersPath, JSON.stringify(orders, null, 2), "utf-8");
-    return true;
-  } catch (error) {
-    console.error("Error writing orders:", error);
-    return false;
-  }
+  return writeData(ORDERS_FILE, orders);
 }
 
 export async function GET() {

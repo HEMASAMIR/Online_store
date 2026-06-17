@@ -1,35 +1,24 @@
 import { NextResponse } from "next/server";
-import fs from "fs/promises";
-import path from "path";
+import { readData, writeData } from "@/lib/dataStore";
 
 export const dynamic = "force-dynamic";
 
-const settingsPath = path.join(process.cwd(), "data", "settings.json");
+const SETTINGS_FILE = "settings.json";
+
+const DEFAULT_SETTINGS = {
+  storeName: "DM Germany",
+  whatsappNumber: "01153811346",
+  shippingFee: 0,
+  facebookUrl: "https://facebook.com/fayrouzastore",
+  freeShippingThreshold: 0
+};
 
 async function readSettings() {
-  try {
-    const data = await fs.readFile(settingsPath, "utf-8");
-    return JSON.parse(data);
-  } catch (error) {
-    console.error("Error reading settings:", error);
-    return {
-      storeName: "DM Germany",
-      whatsappNumber: "01153811346",
-      shippingFee: 0,
-      facebookUrl: "https://facebook.com/fayrouzastore",
-      freeShippingThreshold: 0
-    };
-  }
+  return readData(SETTINGS_FILE, DEFAULT_SETTINGS);
 }
 
 async function writeSettings(settings) {
-  try {
-    await fs.writeFile(settingsPath, JSON.stringify(settings, null, 2), "utf-8");
-    return true;
-  } catch (error) {
-    console.error("Error writing settings:", error);
-    return false;
-  }
+  return writeData(SETTINGS_FILE, settings);
 }
 
 export async function GET() {

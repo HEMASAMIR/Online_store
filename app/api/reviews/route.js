@@ -1,27 +1,16 @@
 import { NextResponse } from "next/server";
-import fs from "fs/promises";
-import path from "path";
+import { readData, writeData } from "@/lib/dataStore";
 
 export const dynamic = "force-dynamic";
 
-const reviewsPath = path.join(process.cwd(), "data", "reviews.json");
+const REVIEWS_FILE = "reviews.json";
 
 async function readReviews() {
-  try {
-    const data = await fs.readFile(reviewsPath, "utf-8");
-    return JSON.parse(data);
-  } catch {
-    return [];
-  }
+  return readData(REVIEWS_FILE, []);
 }
 
 async function writeReviews(reviews) {
-  try {
-    await fs.writeFile(reviewsPath, JSON.stringify(reviews, null, 2), "utf-8");
-    return true;
-  } catch {
-    return false;
-  }
+  return writeData(REVIEWS_FILE, reviews);
 }
 
 export async function GET(request) {
