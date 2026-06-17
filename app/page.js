@@ -146,7 +146,7 @@ export default function Home() {
     storeName: "Fayrouza Store",
     whatsappNumber: "+201012345678",
     shippingFee: 0,
-    facebookUrl: "https://facebook.com/fayrouzastore",
+    facebookUrl: "https://www.facebook.com/share/1EE3VWigZ3/?mibextid=wwXIfr",
     freeShippingThreshold: 0
   });
 

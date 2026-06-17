@@ -9,7 +9,7 @@ const DEFAULT_SETTINGS = {
   storeName: "DM Germany",
   whatsappNumber: "01153811346",
   shippingFee: 0,
-  facebookUrl: "https://facebook.com/fayrouzastore",
+  facebookUrl: "https://www.facebook.com/share/1EE3VWigZ3/?mibextid=wwXIfr",
   freeShippingThreshold: 0
 };
 

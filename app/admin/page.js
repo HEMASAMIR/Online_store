@@ -291,7 +291,7 @@ export default function AdminPage() {
       category: product.category,
       description: product.description,
       image: product.image,
-      stock: product.stock.toString(),
+      stock: (product.stock !== undefined && product.stock !== null) ? product.stock.toString() : "0",
       featuresStr: product.features ? product.features.join(", ") : "",
       sizesStr: product.sizes ? product.sizes.join(", ") : "",
       colorsStr: product.colors ? product.colors.join(", ") : ""
@@ -324,10 +324,11 @@ export default function AdminPage() {
       let res;
       if (editingProduct) {
         // Edit Mode
-        res = await fetch("/api/products", {
+        const productId = editingProduct.id || editingProduct._id;
+        res = await fetch(`/api/products?id=${productId}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ id: editingProduct.id, ...payload })
+          body: JSON.stringify({ id: productId, ...payload })
         });
       } else {
         // Add Mode
@@ -341,8 +342,10 @@ export default function AdminPage() {
       if (res.ok) {
         setIsModalOpen(false);
         fetchData();
+        alert("تم الحفظ بنجاح!");
       } else {
-        alert("فشل في حفظ المنتج");
+        const errData = await res.text();
+        alert(`فشل في حفظ المنتج: ${errData}`);
       }
     } catch (error) {
       console.error("Error saving product:", error);
@@ -806,7 +809,7 @@ export default function AdminPage() {
                     </thead>
                     <tbody>
                       {filteredProducts.map(prod => (
-                        <tr key={prod.id}>
+                        <tr key={prod.id || prod._id}>
                           <td>
                             <img src={prod.image} alt={prod.name} className={styles.productTableThumb} />
                           </td>
@@ -837,7 +840,7 @@ export default function AdminPage() {
                               </button>
                               <button 
                                 className={`${styles.actionBtnIcon} ${styles.deleteBtn}`}
-                                onClick={() => handleDeleteProduct(prod.id)}
+                                onClick={() => handleDeleteProduct(prod.id || prod._id)}
                               >
                                 <Trash2 size={16} />
                               </button>
