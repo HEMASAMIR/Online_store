@@ -3011,6 +3011,80 @@
 }
 
 /* ===========================
+   HERO MOBILE RESPONSIVE
+   =========================== */
+@media (max-width: 768px) {
+  .heroContainer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .heroTitle {
+    font-size: 2.1rem;
+  }
+
+  .heroSub {
+    font-size: 0.95rem;
+  }
+
+  /* Hide the floating absolute-positioned cards area */
+  .heroVisual {
+    display: none;
+  }
+
+  /* Show two inline stat cards below the hero text */
+  .heroContent::after {
+    content: none;
+  }
+
+  .trustRow {
+    margin-top: 0.5rem;
+  }
+
+  .heroSection {
+    padding: 3rem 0 2.5rem;
+  }
+}
+
+/* Show glass cards as a simple inline row on mobile */
+@media (max-width: 768px) {
+  .heroGlassCard,
+  .heroGlassCard2 {
+    position: static;
+    animation: none;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 16px rgba(79, 70, 229, 0.07);
+    flex-direction: row;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  /* Create a flex container to show both cards inline */
+  .heroVisual {
+    display: flex !important;
+    position: static !important;
+    height: auto !important;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .glassCardEmoji {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .glassCardTitle {
+    font-size: 1rem;
+  }
+
+  .glassCardSub {
+    font-size: 0.78rem;
+  }
+}
+
+/* ===========================
    TOAST NOTIFICATION
    =========================== */
 .toastOverlay {
