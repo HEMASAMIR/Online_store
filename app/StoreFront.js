@@ -145,7 +145,7 @@ export default function StoreFront({ initialProducts = [], initialSettings = {} 
   const [settings, setSettings] = useState({
     storeName: "Fayrouza Store",
     whatsappNumber: "+201012345678",
-    shippingFee: 0,
+    shippingFee: 45,
     facebookUrl: "https://www.facebook.com/share/1EE3VWigZ3/?mibextid=wwXIfr",
     freeShippingThreshold: 0,
     ...initialSettings
