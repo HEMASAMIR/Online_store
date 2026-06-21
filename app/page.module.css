@@ -1981,49 +1981,254 @@
   margin-top: 1rem;
 }
 
-/* Checkout Success State */
+/* ===================== PREMIUM ORDER SUCCESS SCREEN ===================== */
+
+/* Keyframes */
+@keyframes confettiFall {
+  0%   { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(220px) rotate(720deg); opacity: 0; }
+}
+
+@keyframes checkPop {
+  0%   { transform: scale(0) rotate(-20deg); opacity: 0; }
+  60%  { transform: scale(1.15) rotate(5deg);  opacity: 1; }
+  80%  { transform: scale(0.95) rotate(-3deg); }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+@keyframes ringPulse {
+  0%   { transform: scale(1);   opacity: 0.6; }
+  100% { transform: scale(2.2); opacity: 0;   }
+}
+
+@keyframes successFadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Container */
 .successState {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 2rem;
+  justify-content: flex-start;
+  padding: 2rem 1.5rem 2rem;
   text-align: center;
-  gap: 1.25rem;
+  gap: 1.35rem;
+  overflow: hidden;
+  position: relative;
 }
 
-.successBadgeIcon {
-  width: 4.5rem;
-  height: 4.5rem;
-  background-color: var(--success-bg);
-  color: var(--success);
-  border-radius: 50%;
+/* Confetti */
+.confettiContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.confettiDot {
+  position: absolute;
+  top: -12px;
+  animation: confettiFall linear both;
+}
+
+/* Icon wrapper with rings */
+.successIconWrapper {
+  position: relative;
+  width: 5.5rem;
+  height: 5.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 20px rgba(16, 185, 129, 0.15);
+  animation: successFadeUp 0.5s ease both;
 }
 
-.successState h3 {
-  font-size: 1.4rem;
-  font-weight: 800;
-  color: var(--success);
+.successRing1,
+.successRing2,
+.successRing3 {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2.5px solid #10b981;
+  animation: ringPulse 2s ease-out infinite;
+}
+.successRing2 { animation-delay: 0.5s; }
+.successRing3 { animation-delay: 1s; }
+
+.successCheckCircle {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 30px rgba(16, 185, 129, 0.4);
+  animation: checkPop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s both;
+  z-index: 1;
 }
 
-.orderNumberText {
-  background-color: var(--background);
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius-sm);
-  border: 1px dashed var(--border);
-  font-size: 0.95rem;
+/* Title block */
+.successTitleBlock {
+  animation: successFadeUp 0.55s ease 0.25s both;
 }
 
-.successState p {
-  color: var(--text-muted);
+.successTitle {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: var(--text);
+  margin: 0 0 0.35rem;
+}
+
+.successSubtitle {
   font-size: 0.9rem;
-  line-height: 1.5;
+  color: var(--text-muted);
+  margin: 0;
 }
+
+/* Order ID card */
+.orderIdCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  background: linear-gradient(135deg, rgba(16,185,129,0.08), rgba(99,102,241,0.08));
+  border: 1.5px solid rgba(16, 185, 129, 0.25);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1.75rem;
+  animation: successFadeUp 0.55s ease 0.38s both;
+  width: 100%;
+  max-width: 280px;
+}
+
+.orderIdLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+.orderIdValue {
+  font-size: 1.05rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #10b981, #6366f1, #10b981);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+  letter-spacing: 0.04em;
+}
+
+/* Steps row */
+.successSteps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 100%;
+  animation: successFadeUp 0.55s ease 0.5s both;
+}
+
+.successStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  flex: 1;
+}
+
+.stepEmoji {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.stepText {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.successStepDivider {
+  width: 1.5rem;
+  height: 2px;
+  background: linear-gradient(90deg, #10b981, #6366f1);
+  border-radius: 9999px;
+  flex-shrink: 0;
+  margin-bottom: 1.1rem;
+}
+
+/* WhatsApp note */
+.whatsappNote {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1.1rem;
+  text-align: right;
+  animation: successFadeUp 0.55s ease 0.62s both;
+  width: 100%;
+}
+
+.whatsappNoteIcon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.whatsappNote p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+/* Back button */
+.successBackBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.9rem 1.5rem;
+  border: none;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  font-family: var(--font-cairo);
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(13, 148, 136, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: successFadeUp 0.55s ease 0.75s both;
+  margin-top: 0.25rem;
+}
+
+.successBackBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(13, 148, 136, 0.45);
+}
+
+.successBackBtn:active {
+  transform: translateY(0);
+}
+
 
 /* Responsive Media Queries */
 @media (max-width: 1024px) {

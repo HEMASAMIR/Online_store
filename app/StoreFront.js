@@ -1332,24 +1332,80 @@ export default function StoreFront({ initialProducts = [], initialSettings = {} 
 
             {checkoutStep === "success" && (
               <div className={styles.successState}>
-                <div className={styles.successBadgeIcon}>
-                  <Check size={40} />
+                {/* Confetti particles */}
+                <div className={styles.confettiContainer} aria-hidden="true">
+                  {[...Array(18)].map((_, i) => (
+                    <span
+                      key={i}
+                      className={styles.confettiDot}
+                      style={{
+                        left: `${(i * 5.8 + 3) % 100}%`,
+                        animationDelay: `${(i * 0.18) % 1.5}s`,
+                        animationDuration: `${1.2 + (i % 5) * 0.25}s`,
+                        background: ["#10b981","#f59e0b","#6366f1","#ec4899","#3b82f6","#f97316"][i % 6],
+                        width: `${6 + (i % 4) * 3}px`,
+                        height: `${6 + (i % 4) * 3}px`,
+                        borderRadius: i % 3 === 0 ? "50%" : "2px",
+                      }}
+                    />
+                  ))}
                 </div>
-                <h3>تم إرسال طلبك بنجاح! 🎉</h3>
-                <p className={styles.orderNumberText}>رقم الطلب الخاص بك: <strong>{lastOrderId}</strong></p>
-                <p>لقد فتحنا نافذة جديدة لإرسال الفاتورة والتفاصيل إلينا مباشرة عبر الواتساب لتأكيد الشحن الفوري.</p>
-                <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginTop: "0.5rem" }}>
-                  إذا لم يتم فتح الواتساب تلقائياً، يمكنك إغلاق السلة والاتصال بنا مباشرة.
-                </p>
+
+                {/* Animated check circle with pulsing rings */}
+                <div className={styles.successIconWrapper}>
+                  <span className={styles.successRing1} />
+                  <span className={styles.successRing2} />
+                  <span className={styles.successRing3} />
+                  <div className={styles.successCheckCircle}>
+                    <Check size={38} strokeWidth={3} />
+                  </div>
+                </div>
+
+                {/* Title */}
+                <div className={styles.successTitleBlock}>
+                  <h3 className={styles.successTitle}>تم إرسال طلبك بنجاح! 🎉</h3>
+                  <p className={styles.successSubtitle}>شكراً لثقتك بنا — جاري تجهيز طلبك فوراً</p>
+                </div>
+
+                {/* Order ID card */}
+                <div className={styles.orderIdCard}>
+                  <span className={styles.orderIdLabel}>رقم الطلب</span>
+                  <span className={styles.orderIdValue}>{lastOrderId}</span>
+                </div>
+
+                {/* Steps row */}
+                <div className={styles.successSteps}>
+                  <div className={styles.successStep}>
+                    <span className={styles.stepEmoji}>✅</span>
+                    <span className={styles.stepText}>تم استلام الطلب</span>
+                  </div>
+                  <div className={styles.successStepDivider} />
+                  <div className={styles.successStep}>
+                    <span className={styles.stepEmoji}>📦</span>
+                    <span className={styles.stepText}>جاري التجهيز</span>
+                  </div>
+                  <div className={styles.successStepDivider} />
+                  <div className={styles.successStep}>
+                    <span className={styles.stepEmoji}>🚚</span>
+                    <span className={styles.stepText}>في طريقه إليك</span>
+                  </div>
+                </div>
+
+                {/* WhatsApp note */}
+                <div className={styles.whatsappNote}>
+                  <span className={styles.whatsappNoteIcon}>💬</span>
+                  <p>فتحنا واتساب تلقائياً لإرسال تفاصيل طلبك. إذا لم يفتح، تواصل معنا مباشرة على الرقم.</p>
+                </div>
+
                 <button
-                  className="btn btn-primary"
+                  className={styles.successBackBtn}
                   onClick={() => {
                     setIsCartOpen(false);
                     setCheckoutStep("cart");
                   }}
-                  style={{ width: "100%", marginTop: "1.5rem" }}
                 >
-                  العودة للمتجر
+                  <ShoppingCart size={18} />
+                  العودة للتسوق
                 </button>
               </div>
             )}
