@@ -6,7 +6,10 @@ export const dynamic = "force-dynamic";
 export async function GET() {
   try {
     const url = "https://dpkwisgibj1m4fv6.public.blob.vercel-storage.com/data/products-1782253313591.json";
-    const blob = await get(url);
+    const blob = await get(url, { 
+      access: "public",
+      token: process.env.VERCEL_BLOB_READ_WRITE_TOKEN 
+    });
     if (!blob) return NextResponse.json({ error: "Blob not found" });
     
     const reader = blob.stream.getReader();
