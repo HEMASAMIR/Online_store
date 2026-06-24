@@ -796,19 +796,5 @@
     "sizes": [],
     "colors": [],
     "oldPrice": 450
-  },
-  {
-    "id": 43,
-    "name": "Test Product",
-    "description": "Test description for the new product.",
-    "price": 150,
-    "oldPrice": null,
-    "category": "فيتامينات ومكملات",
-    "image": "https://picsum.photos/200",
-    "rating": 5,
-    "stock": 10,
-    "features": [],
-    "sizes": [],
-    "colors": []
   }
 ]
