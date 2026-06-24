@@ -86,6 +86,10 @@ export default function AdminPage() {
     colorsStr: ""
   });
 
+  // Delete Confirmation modal states
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+  const [productToDelete, setProductToDelete] = useState(null);
+
   // Selected order details modal
   const [selectedOrder, setSelectedOrder] = useState(null);
 
@@ -355,8 +359,6 @@ export default function AdminPage() {
 
   // Delete Product
   const handleDeleteProduct = async (id) => {
-    if (!confirm("هل أنت متأكد من حذف هذا المنتج؟")) return;
-
     try {
       const res = await fetch(`/api/products?id=${id}`, {
         method: "DELETE"
@@ -840,7 +842,10 @@ export default function AdminPage() {
                               </button>
                               <button 
                                 className={`${styles.actionBtnIcon} ${styles.deleteBtn}`}
-                                onClick={() => handleDeleteProduct(prod.id || prod._id)}
+                                onClick={() => {
+                                  setProductToDelete(prod);
+                                  setIsDeleteModalOpen(true);
+                                }}
                               >
                                 <Trash2 size={16} />
                               </button>
@@ -1171,6 +1176,64 @@ export default function AdminPage() {
           </div>
         )}
       </main>
+
+      {/* Custom Delete Confirmation Modal */}
+      {isDeleteModalOpen && productToDelete && (
+        <div className={styles.deleteConfirmOverlay}>
+          <div className={styles.deleteConfirmContent}>
+            <div className={styles.deleteConfirmHeader}>
+              <div className={styles.deleteConfirmIcon}>
+                <AlertTriangle size={32} className={styles.warningIconAnim} />
+              </div>
+              <h3>لحظة يا غالي! 🛑</h3>
+            </div>
+            
+            <div className={styles.deleteConfirmBody}>
+              <p className={styles.deleteConfirmMsg}>
+                متأكد إنك عاوز تحذف المنتج ده نهائياً؟ شكله جميل أوي وخسارة نمحيه من المتجر! 🥺💔
+              </p>
+              
+              <div className={styles.deleteConfirmProductCard}>
+                {productToDelete.image && (
+                  <img 
+                    src={productToDelete.image} 
+                    alt={productToDelete.name} 
+                    className={styles.deleteConfirmProdImage}
+                  />
+                )}
+                <div className={styles.deleteConfirmProdDetails}>
+                  <span className={styles.deleteConfirmProdName}>{productToDelete.name}</span>
+                  <span className={styles.deleteConfirmProdPrice}>{productToDelete.price} ج.م</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className={styles.deleteConfirmFooter}>
+              <button 
+                type="button"
+                className={`${styles.deleteConfirmBtn} ${styles.btnCancel}`} 
+                onClick={() => {
+                  setIsDeleteModalOpen(false);
+                  setProductToDelete(null);
+                }}
+              >
+                لا، خليه مكانه 😅
+              </button>
+              <button 
+                type="button"
+                className={`${styles.deleteConfirmBtn} ${styles.btnConfirm}`}
+                onClick={async () => {
+                  await handleDeleteProduct(productToDelete.id || productToDelete._id);
+                  setIsDeleteModalOpen(false);
+                  setProductToDelete(null);
+                }}
+              >
+                أيوة، احذفه وخلاص 🔥
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Product Form Modal (Add / Edit) */}
       {isModalOpen && (
