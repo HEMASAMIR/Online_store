@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
 import { readData, writeData } from "@/lib/dataStore";
 
+import fs from "fs/promises";
+import path from "path";
+
 export const dynamic = "force-dynamic";
 
 const PRODUCTS_FILE = "products.json";
@@ -18,7 +21,22 @@ async function readReviews() {
   return readData(REVIEWS_FILE, []);
 }
 
-export async function GET() {
+export async function GET(request) {
+  const { searchParams } = new URL(request.url);
+  const forceSeed = searchParams.get("seed");
+
+  if (forceSeed === "true") {
+    try {
+      const filePath = path.join(process.cwd(), "data", PRODUCTS_FILE);
+      const raw = await fs.readFile(filePath, "utf-8");
+      const localProducts = JSON.parse(raw);
+      await writeProducts(localProducts);
+      return NextResponse.json({ success: true, message: `Seeded ${localProducts.length} products successfully` });
+    } catch (e) {
+      return NextResponse.json({ success: false, error: e.message }, { status: 500 });
+    }
+  }
+
   const products = await readProducts();
   const reviews = await readReviews();
   
