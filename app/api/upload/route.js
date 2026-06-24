@@ -1,8 +1,13 @@
 import { NextResponse } from "next/server";
+import fs from "fs/promises";
+import path from "path";
 
 export const dynamic = "force-dynamic";
 
 const IS_VERCEL = process.env.VERCEL === "1";
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+const REPO = "HEMASAMIR/Online_store";
+const BRANCH = "main";
 
 export async function POST(request) {
   try {
@@ -13,35 +18,47 @@ export async function POST(request) {
       return NextResponse.json({ success: false, error: "No file uploaded" }, { status: 400 });
     }
 
+    const bytes = await file.arrayBuffer();
+    const buffer = Buffer.from(bytes);
+    const originalExt = file.name ? file.name.split('.').pop() : "jpg";
+    const uniqueFilename = `${Date.now()}-${Math.random().toString(36).substring(2, 9)}.${originalExt}`;
+
     if (IS_VERCEL) {
-      // === Vercel: use Blob storage ===
-      const { put } = await import("@vercel/blob");
+      if (!GITHUB_TOKEN) {
+        throw new Error("Missing GITHUB_TOKEN environment variable.");
+      }
       
-      const originalExt = file.name ? file.name.split('.').pop() : "jpg";
-      const uniqueFilename = `uploads/${Date.now()}-${Math.random().toString(36).substring(2, 9)}.${originalExt}`;
+      const base64Content = buffer.toString("base64");
+      const githubPath = `public/uploads/${uniqueFilename}`;
+      const url = `https://api.github.com/repos/${REPO}/contents/${githubPath}`;
       
-      const blob = await put(uniqueFilename, file, {
-        access: "public",
-        addRandomSuffix: false,
+      const putRes = await fetch(url, {
+        method: "PUT",
+        headers: {
+          "Authorization": `Bearer ${GITHUB_TOKEN}`,
+          "Accept": "application/vnd.github.v3+json"
+        },
+        body: JSON.stringify({
+          message: `Upload image ${uniqueFilename}`,
+          content: base64Content,
+          branch: BRANCH
+        })
       });
 
-      // blob.url is the permanent public URL for the image
-      return NextResponse.json({ success: true, url: blob.url });
+      if (!putRes.ok) {
+        console.error("GitHub upload failed:", await putRes.text());
+        throw new Error("فشل الرفع إلى GitHub");
+      }
+
+      // Return the raw GitHub content URL so it works immediately
+      const rawUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${githubPath}`;
+      return NextResponse.json({ success: true, url: rawUrl });
+      
     } else {
       // === Local dev: save to filesystem ===
-      const fs = (await import("fs/promises")).default;
-      const path = (await import("path")).default;
-      
-      const bytes = await file.arrayBuffer();
-      const buffer = Buffer.from(bytes);
-
       const uploadDir = path.join(process.cwd(), "public", "uploads");
       await fs.mkdir(uploadDir, { recursive: true });
-
-      const originalExt = path.extname(file.name) || ".jpg";
-      const uniqueFilename = `${Date.now()}-${Math.random().toString(36).substring(2, 9)}${originalExt}`;
       const filePath = path.join(uploadDir, uniqueFilename);
-
       await fs.writeFile(filePath, buffer);
 
       const fileUrl = `/uploads/${uniqueFilename}`;
