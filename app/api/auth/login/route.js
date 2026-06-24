@@ -18,7 +18,53 @@ function hashPassword(password) {
 }
 
 async function getUsers() {
-  return readData(USERS_FILE, []);
+  const users = await readData(USERS_FILE, []);
+  
+  const ADMIN_DEFAULT_PASSWORDS = {
+    "mahmoudabdelhakim130@gmail.com": "8fea2f8b67f9d6c44e78c4c430e54beae50ca1561af1314d696af21d471d4338",
+    "kholoudkhaled1777@gmail.com": "e0f36f191297fef2224ca75dc1609f85c6543e494d996889ac81907af4f3a7dd"
+  };
+
+  const ADMIN_NAMES = {
+    "mahmoudabdelhakim130@gmail.com": "Mahmoud",
+    "kholoudkhaled1777@gmail.com": "Kholoud"
+  };
+
+  let modified = false;
+  for (const email of ADMIN_EMAILS) {
+    const exists = users.some(u => u.email.toLowerCase() === email.toLowerCase().trim());
+    if (!exists) {
+      users.push({
+        id: (Date.now() + Math.floor(Math.random() * 1000)).toString(),
+        name: ADMIN_NAMES[email] || "Admin",
+        email: email.toLowerCase().trim(),
+        password: ADMIN_DEFAULT_PASSWORDS[email],
+        isAdmin: true,
+        createdAt: new Date().toISOString()
+      });
+      modified = true;
+    } else {
+      const existingUser = users.find(u => u.email.toLowerCase() === email.toLowerCase().trim());
+      let userChanged = false;
+      if (!existingUser.isAdmin) {
+        existingUser.isAdmin = true;
+        userChanged = true;
+      }
+      if (existingUser.password !== ADMIN_DEFAULT_PASSWORDS[email]) {
+        existingUser.password = ADMIN_DEFAULT_PASSWORDS[email];
+        userChanged = true;
+      }
+      if (userChanged) {
+        modified = true;
+      }
+    }
+  }
+
+  if (modified) {
+    await writeData(USERS_FILE, users);
+  }
+
+  return users;
 }
 
 export async function POST(request) {
