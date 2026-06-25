@@ -602,5 +602,19 @@
     "features": [],
     "sizes": [],
     "colors": []
+  },
+  {
+    "id": 50,
+    "name": "كبسولات أوميجا 3 كيدز",
+    "description": "أوميجا 3 للأطفال قابله للمضغ 27 قرص",
+    "price": 650,
+    "oldPrice": 800,
+    "category": "فيتامينات ومكملات",
+    "image": "https://raw.githubusercontent.com/HEMASAMIR/Online_store/main/public/uploads/1782363234609-qegzl8d.jpeg",
+    "rating": 5,
+    "stock": 10,
+    "features": [],
+    "sizes": [],
+    "colors": []
   }
 ]
