@@ -378,5 +378,19 @@
     "features": [],
     "sizes": [],
     "colors": []
+  },
+  {
+    "id": 34,
+    "name": "أقراص الكالسيوم الفوار",
+    "description": "أقراص الكالسيوم الفوارة، 20 قرصًا\nنكهة البرتقال\nيساهم في الحفاظ على صحة العظام\nتحتوي أقراص ميفولي كالسيوم الفوارة بنكهة البرتقال الفاكهية على 400 ملغ من الكالسيوم لكل قرص. الكالسيوم ضروري للحفاظ على صحة العظام والأسنان.",
+    "price": 230,
+    "oldPrice": 300,
+    "category": "فيتامينات ومكملات",
+    "image": "https://raw.githubusercontent.com/HEMASAMIR/Online_store/main/public/uploads/1782360106441-c2g89b2.jpeg",
+    "rating": 5,
+    "stock": 10,
+    "features": [],
+    "sizes": [],
+    "colors": []
   }
 ]
