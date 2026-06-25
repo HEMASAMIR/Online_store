@@ -546,5 +546,19 @@
     "features": [],
     "sizes": [],
     "colors": []
+  },
+  {
+    "id": 46,
+    "name": "كريم مزيل عرق للبشرة الحساسة، 50 مل ",
+    "description": "كريم مزيل عرق للبشرة الحساسة، 50 مل \nكريم مزيل العرق للبشرة الحساسة من باليا يوفر حماية فعالة تدوم 48 ساعة مع كونه لطيفًا للغاية على البشرة.",
+    "price": 300,
+    "oldPrice": 350,
+    "category": "مستلزمات شخصية",
+    "image": "https://raw.githubusercontent.com/HEMASAMIR/Online_store/main/public/uploads/1782362748259-5hnzxlo.jpeg",
+    "rating": 5,
+    "stock": 10,
+    "features": [],
+    "sizes": [],
+    "colors": []
   }
 ]
