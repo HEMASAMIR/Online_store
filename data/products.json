@@ -560,5 +560,19 @@
     "features": [],
     "sizes": [],
     "colors": []
+  },
+  {
+    "id": 47,
+    "name": "بخاخ مزيل عرق برائحة عطر Glamorous Moment، 150",
+    "description": "بخاخ مزيل عرق برائحة عطر Glamorous Moment، 150\nيجمع مزيل العرق \"غلاموروس مومنت\" من باليا بين حماية بخاخ مزيل العرق ورائحة العطر الساحرة. تركيبة نباتية تمزج بين نفحات الأزهار والنفحات الشرقية، لتمنحكِ رائحة تدوم طويلاً على كامل الجسم. لا يترك البخاخ أي بقايا بيضاء،",
+    "price": 300,
+    "oldPrice": 350,
+    "category": "مستلزمات شخصية",
+    "image": "https://raw.githubusercontent.com/HEMASAMIR/Online_store/main/public/uploads/1782362826204-4ln6d93.jpeg",
+    "rating": 5,
+    "stock": 10,
+    "features": [],
+    "sizes": [],
+    "colors": []
   }
 ]
