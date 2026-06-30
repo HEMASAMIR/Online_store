@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = "https://webapplication-lovat.vercel.app";
+  const baseUrl = "https://fayrouza-store.com";
 
   return [
     {

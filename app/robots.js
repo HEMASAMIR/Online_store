@@ -7,6 +7,6 @@ export default function robots() {
         disallow: ["/admin", "/api/"],
       },
     ],
-    sitemap: "https://webapplication-lovat.vercel.app/sitemap.xml",
+    sitemap: "https://fayrouza-store.com/sitemap.xml",
   };
 }

@@ -3,7 +3,7 @@ import "./globals.css";
 export const metadata = {
   title: "Fayrouza Online Store | متجر فيروزة للمنتجات الألمانية الأصلية",
   description: "Fayrouza Online Store - تشكيلة واسعة من مستحضرات التجميل، الفيتامينات، ومنتجات العناية الشخصية الألمانية الأصلية 100%. شحن لجميع أنحاء مصر.",
-  metadataBase: new URL("https://webapplication-lovat.vercel.app"),
+  metadataBase: new URL("https://fayrouza-store.com"),
   keywords: [
     "فيروزة",
     "Fayrouza",
@@ -40,8 +40,8 @@ export const metadata = {
   openGraph: {
     title: "Fayrouza Online Store | متجر فيروزة للمنتجات الألمانية الأصلية",
     description: "تشكيلة واسعة من مستحضرات التجميل، الفيتامينات، ومنتجات العناية الشخصية الألمانية الأصلية 100%. شحن لجميع أنحاء مصر.",
-    url: "https://webapplication-lovat.vercel.app",
-    siteName: "Fayrouza Online Store",
+    url: "https://fayrouza-store.com",
+    siteName: "متجر فيروزة للمنتجات الألمانية الأصلية",
     images: [
       {
         url: "/logo.png",
@@ -60,7 +60,7 @@ export const metadata = {
     images: ["/logo.png"],
   },
   alternates: {
-    canonical: "https://webapplication-lovat.vercel.app",
+    canonical: "https://fayrouza-store.com",
   },
   verification: {
     // Google Search Console verification tag will go here
@@ -74,9 +74,9 @@ const jsonLdOrganization = {
   "@type": "Organization",
   name: "متجر فيروزة للمنتجات الألمانية الأصلية",
   alternateName: "Fayrouza Online Store",
-  url: "https://webapplication-lovat.vercel.app",
-  logo: "https://webapplication-lovat.vercel.app/logo.png",
-  image: "https://webapplication-lovat.vercel.app/logo.png",
+  url: "https://fayrouza-store.com",
+  logo: "https://fayrouza-store.com/logo.png",
+  image: "https://fayrouza-store.com/logo.png",
   description:
     "متجر فيروزة - تشكيلة واسعة من مستحضرات التجميل، الفيتامينات، ومنتجات العناية الشخصية الألمانية الأصلية 100%. شحن لجميع أنحاء مصر.",
   address: {
@@ -99,14 +99,14 @@ const jsonLdWebSite = {
   "@type": "WebSite",
   name: "متجر فيروزة للمنتجات الألمانية الأصلية",
   alternateName: "Fayrouza Store",
-  url: "https://webapplication-lovat.vercel.app",
+  url: "https://fayrouza-store.com",
   inLanguage: "ar",
   potentialAction: {
     "@type": "SearchAction",
     target: {
       "@type": "EntryPoint",
       urlTemplate:
-        "https://webapplication-lovat.vercel.app/?q={search_term_string}",
+        "https://fayrouza-store.com/?q={search_term_string}",
     },
     "query-input": "required name=search_term_string",
   },
@@ -116,8 +116,8 @@ const jsonLdStore = {
   "@context": "https://schema.org",
   "@type": "Store",
   name: "متجر فيروزة للمنتجات الألمانية الأصلية",
-  image: "https://webapplication-lovat.vercel.app/logo.png",
-  url: "https://webapplication-lovat.vercel.app",
+  image: "https://fayrouza-store.com/logo.png",
+  url: "https://fayrouza-store.com",
   description:
     "تشكيلة واسعة من مستحضرات التجميل، الفيتامينات، ومنتجات العناية الشخصية الألمانية الأصلية 100%. شحن لجميع أنحاء مصر.",
   priceRange: "$$",
