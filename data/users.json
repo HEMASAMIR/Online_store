@@ -22,5 +22,13 @@
     "password": "7d5b0c99e1d8a6aeb85f7dacde550c7356fb59e61a27f7a55e258501b5453ad4",
     "isAdmin": false,
     "createdAt": "2026-06-14T21:42:23.290Z"
+  },
+  {
+    "id": "1783018276408",
+    "name": "احمد بدوي",
+    "email": "ahmed.24.badawy@gmail.com",
+    "password": "961b4b65901c41b5272ce82c32fd23e8f6d44c0c697773b39e7698a2f8a14a03",
+    "isAdmin": false,
+    "createdAt": "2026-07-02T18:51:16.408Z"
   }
 ]
