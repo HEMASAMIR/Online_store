@@ -25,5 +25,14 @@
     "comment": "Great product, highly recommend!",
     "date": "2026-06-13T16:39:43.322Z",
     "status": "approved"
+  },
+  {
+    "id": 4,
+    "productId": 40,
+    "userName": "حازم محمد ",
+    "rating": 5,
+    "comment": "بصراحة منتج ممتاز والتعامل ممتاز وشكرا جدا للاسلوب والذوق في التعامل والتواصل معكم ",
+    "date": "2026-07-14T12:36:37.395Z",
+    "status": "pending"
   }
 ]
