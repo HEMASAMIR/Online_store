@@ -248,5 +248,50 @@
     "total": 945,
     "date": "2026-06-21T14:28:37.901Z",
     "status": "cancelled"
+  },
+  {
+    "id": "ORD-335684-205",
+    "customerName": "الاء ابراهيم احمد ",
+    "phone": "01500045291",
+    "address": "الاسكندرية / كمبوند القضاه على المحموديه بجوار شركة منصور قبل كوبرى الناموس عمارة ٣ الدور السابع ",
+    "notes": "",
+    "items": [
+      {
+        "cartItemId": "45-none-none",
+        "id": 45,
+        "name": "كريم مزيل للعرق مع صودا الخبز والزنك، 50مل ",
+        "price": 300,
+        "image": "https://raw.githubusercontent.com/HEMASAMIR/Online_store/main/public/uploads/1782362564093-gdgt7rz.jpeg",
+        "category": "مستلزمات شخصية",
+        "size": "",
+        "color": "",
+        "quantity": 1
+      },
+      {
+        "cartItemId": "53-none-none",
+        "id": 53,
+        "name": "زيت للشعر بزيت جوز الهند وزيت البوريتي",
+        "price": 650,
+        "image": "https://raw.githubusercontent.com/HEMASAMIR/Online_store/main/public/uploads/1782363712548-7h1kgw7.jpeg",
+        "category": "عناية بالشعر",
+        "size": "",
+        "color": "",
+        "quantity": 1
+      },
+      {
+        "cartItemId": "46-none-none",
+        "id": 46,
+        "name": "كريم مزيل عرق للبشرة الحساسة، 50 مل ",
+        "price": 300,
+        "image": "https://raw.githubusercontent.com/HEMASAMIR/Online_store/main/public/uploads/1782362748259-5hnzxlo.jpeg",
+        "category": "مستلزمات شخصية",
+        "size": "",
+        "color": "",
+        "quantity": 1
+      }
+    ],
+    "total": 1350,
+    "date": "2026-07-17T11:22:15.684Z",
+    "status": "pending"
   }
 ]
