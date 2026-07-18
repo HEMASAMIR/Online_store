@@ -4,7 +4,7 @@
     "code": "FAYROUZA10",
     "discountType": "percentage",
     "discountValue": 10,
-    "isActive": true
+    "isActive": false
   },
   {
     "id": 2,
