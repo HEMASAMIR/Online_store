@@ -293,5 +293,28 @@
     "total": 1350,
     "date": "2026-07-17T11:22:15.684Z",
     "status": "completed"
+  },
+  {
+    "id": "ORD-449776-882",
+    "customerName": "مى يوسف",
+    "phone": "01286202358",
+    "address": "٤ عبد المنعم رياض متفرع من ٤٥ العصافرة قبلى ",
+    "notes": "تواصل مندوب شحن قبل التسليم تحديد الوقت ",
+    "items": [
+      {
+        "cartItemId": "55-none-none",
+        "id": 55,
+        "name": "كولاجين البشرة",
+        "price": 800,
+        "image": "https://raw.githubusercontent.com/HEMASAMIR/Online_store/main/public/uploads/1782364018326-ia8f9bx.jpeg",
+        "category": "عناية بالبشرة",
+        "size": "",
+        "color": "",
+        "quantity": 1
+      }
+    ],
+    "total": 850,
+    "date": "2026-07-22T20:34:09.777Z",
+    "status": "pending"
   }
 ]
