@@ -30,5 +30,13 @@
     "password": "961b4b65901c41b5272ce82c32fd23e8f6d44c0c697773b39e7698a2f8a14a03",
     "isAdmin": false,
     "createdAt": "2026-07-02T18:51:16.408Z"
+  },
+  {
+    "id": "1785088647789",
+    "name": "Ahmed Hamed",
+    "email": "ah5791782@gmail.com",
+    "password": "54fdab73d0a493c69c60460d0315671d6148868f2a1c1ff78e6f893f6914d7fb",
+    "isAdmin": false,
+    "createdAt": "2026-07-26T17:57:27.789Z"
   }
 ]
