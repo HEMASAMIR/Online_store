@@ -38,5 +38,13 @@
     "password": "54fdab73d0a493c69c60460d0315671d6148868f2a1c1ff78e6f893f6914d7fb",
     "isAdmin": false,
     "createdAt": "2026-07-26T17:57:27.789Z"
+  },
+  {
+    "id": "1785300666640",
+    "name": "saqr",
+    "email": "s@saqradel.com",
+    "password": "9f54c8e60994682eacfe43a5bae2f79204de3a002f85a5af2a44dfe3f5105f53",
+    "isAdmin": false,
+    "createdAt": "2026-07-29T04:51:06.641Z"
   }
 ]
