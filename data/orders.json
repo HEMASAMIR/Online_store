@@ -339,5 +339,28 @@
     "total": 880,
     "date": "2026-07-24T01:57:33.128Z",
     "status": "completed"
+  },
+  {
+    "id": "ORD-290249-263",
+    "customerName": "أحمد حامد محمود ",
+    "phone": "01553452813",
+    "address": "القاهرة-مدينة الشروق-عمارة 101-مربع 17-مجموعة 2-الحي الثاني",
+    "notes": "",
+    "items": [
+      {
+        "cartItemId": "15-none-none",
+        "id": 15,
+        "name": "قهوة اسبريسو ",
+        "price": 700,
+        "image": "https://raw.githubusercontent.com/HEMASAMIR/Online_store/main/public/uploads/1782356765454-d9ytulc.jpeg",
+        "category": "أغذية صحية",
+        "size": "",
+        "color": "",
+        "quantity": 1
+      }
+    ],
+    "total": 750,
+    "date": "2026-07-31T14:48:10.249Z",
+    "status": "pending"
   }
 ]
