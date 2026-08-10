@@ -362,5 +362,28 @@
     "total": 750,
     "date": "2026-07-31T14:48:10.249Z",
     "status": "completed"
+  },
+  {
+    "id": "ORD-988370-456",
+    "customerName": "نانسي طارق ",
+    "phone": "01204067140",
+    "address": "المقطم شارع شرين بدوي قطعه 7530",
+    "notes": "",
+    "items": [
+      {
+        "cartItemId": "45-none-none",
+        "id": 45,
+        "name": "كريم مزيل للعرق مع صودا الخبز والزنك، 50مل ",
+        "price": 300,
+        "image": "https://raw.githubusercontent.com/HEMASAMIR/Online_store/main/public/uploads/1782362564093-gdgt7rz.jpeg",
+        "category": "مستلزمات شخصية",
+        "size": "",
+        "color": "",
+        "quantity": 2
+      }
+    ],
+    "total": 700,
+    "date": "2026-08-10T15:49:48.370Z",
+    "status": "pending"
   }
 ]
