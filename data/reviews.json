@@ -43,5 +43,14 @@
     "comment": "ممتاز جداً و كويس لمرضي السكر كمان ",
     "date": "2026-07-24T10:40:05.410Z",
     "status": "approved"
+  },
+  {
+    "id": 6,
+    "productId": 55,
+    "userName": "ميرنا",
+    "rating": 5,
+    "comment": "تحفه بجد ❤️❤️",
+    "date": "2026-08-11T15:01:54.953Z",
+    "status": "pending"
   }
 ]
