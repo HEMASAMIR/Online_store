@@ -385,5 +385,72 @@
     "total": 700,
     "date": "2026-08-10T15:49:48.370Z",
     "status": "completed"
+  },
+  {
+    "id": "ORD-730842-980",
+    "customerName": "محمود السيد محمود",
+    "phone": "01117218869",
+    "address": "الاسماعيلية -معاشات الزهراء عماره ٢١ بجوار مستشفى نمره ٦",
+    "notes": "",
+    "items": [
+      {
+        "cartItemId": "25-none-none",
+        "id": 25,
+        "name": "كبسولات بي كومبليكس",
+        "price": 290,
+        "image": "https://raw.githubusercontent.com/HEMASAMIR/Online_store/main/public/uploads/1782358863755-6xu196y.jpeg",
+        "category": "فيتامينات ومكملات",
+        "size": "",
+        "color": "",
+        "quantity": 1
+      },
+      {
+        "cartItemId": "27-none-none",
+        "id": 27,
+        "name": "سكر مولفيس الخطير مناسب للدايت وبدون يعرات حرارية",
+        "price": 260,
+        "image": "https://raw.githubusercontent.com/HEMASAMIR/Online_store/main/public/uploads/1782359228918-7mrn93g.jpeg",
+        "category": "فيتامينات ومكملات",
+        "size": "",
+        "color": "",
+        "quantity": 1
+      },
+      {
+        "cartItemId": "37-none-none",
+        "id": 37,
+        "name": "مزيل عرق رجالي ",
+        "price": 350,
+        "image": "https://raw.githubusercontent.com/HEMASAMIR/Online_store/main/public/uploads/1782360574355-aic0wup.jpeg",
+        "category": "مستلزمات شخصية",
+        "size": "",
+        "color": "",
+        "quantity": 1
+      },
+      {
+        "cartItemId": "49-none-none",
+        "id": 49,
+        "name": "كبسولات الأوميجا 3",
+        "price": 550,
+        "image": "https://raw.githubusercontent.com/HEMASAMIR/Online_store/main/public/uploads/1782363107527-u7b6hb5.jpeg",
+        "category": "فيتامينات ومكملات",
+        "size": "",
+        "color": "",
+        "quantity": 1
+      },
+      {
+        "cartItemId": "58-none-none",
+        "id": 58,
+        "name": "فيتامين ك",
+        "price": 430,
+        "image": "https://raw.githubusercontent.com/HEMASAMIR/Online_store/main/public/uploads/1782364645237-cdff1mj.jpeg",
+        "category": "فيتامينات ومكملات",
+        "size": "",
+        "color": "",
+        "quantity": 1
+      }
+    ],
+    "total": 1980,
+    "date": "2026-08-14T15:35:30.842Z",
+    "status": "pending"
   }
 ]
