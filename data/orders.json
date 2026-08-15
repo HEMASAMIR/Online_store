@@ -452,5 +452,39 @@
     "total": 1980,
     "date": "2026-08-14T15:35:30.842Z",
     "status": "completed"
+  },
+  {
+    "id": "ORD-320440-916",
+    "customerName": "Marwa Fouad ",
+    "phone": "01021110092",
+    "address": "13 ش الزعيم غاندي جسر السويس خلف مترو نادي الشمس برج الإيمان الدور ال7 شقه 20 اللي ف نص الدور",
+    "notes": "الاتصال قبل التوصيل\nالعماره بها مسجد عباد الرحمن",
+    "items": [
+      {
+        "cartItemId": "42-none-none",
+        "id": 42,
+        "name": "مزيل العرق باليا إكسترا دراي للرجال",
+        "price": 350,
+        "image": "https://raw.githubusercontent.com/HEMASAMIR/Online_store/main/public/uploads/1782361237998-57ehwgu.jpeg",
+        "category": "مستلزمات شخصية",
+        "size": "",
+        "color": "",
+        "quantity": 1
+      },
+      {
+        "cartItemId": "45-none-none",
+        "id": 45,
+        "name": "كريم مزيل للعرق مع صودا الخبز والزنك، 50مل ",
+        "price": 300,
+        "image": "https://raw.githubusercontent.com/HEMASAMIR/Online_store/main/public/uploads/1782362564093-gdgt7rz.jpeg",
+        "category": "مستلزمات شخصية",
+        "size": "",
+        "color": "",
+        "quantity": 1
+      }
+    ],
+    "total": 750,
+    "date": "2026-08-15T00:55:20.440Z",
+    "status": "pending"
   }
 ]
