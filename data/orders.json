@@ -486,5 +486,39 @@
     "total": 750,
     "date": "2026-08-15T00:55:20.440Z",
     "status": "completed"
+  },
+  {
+    "id": "ORD-901347-775",
+    "customerName": "ابتهال فريد ",
+    "phone": "01154779774",
+    "address": "مدينتي بريفادو مجموعة ٩٤ عمارة ١٥ شقة ٤٤",
+    "notes": "",
+    "items": [
+      {
+        "cartItemId": "21-none-none",
+        "id": 21,
+        "name": "كورس التخسيس الخطير فيت بلوكر الألماني",
+        "price": 450,
+        "image": "https://raw.githubusercontent.com/HEMASAMIR/Online_store/main/public/uploads/1782358221183-d4npe39.jpeg",
+        "category": "فيتامينات ومكملات",
+        "size": "",
+        "color": "",
+        "quantity": 2
+      },
+      {
+        "cartItemId": "50-none-none",
+        "id": 50,
+        "name": "كبسولات أوميجا 3 كيدز",
+        "price": 650,
+        "image": "https://raw.githubusercontent.com/HEMASAMIR/Online_store/main/public/uploads/1782363234609-qegzl8d.jpeg",
+        "category": "فيتامينات ومكملات",
+        "size": "",
+        "color": "",
+        "quantity": 2
+      }
+    ],
+    "total": 2250,
+    "date": "2026-08-20T15:31:41.347Z",
+    "status": "pending"
   }
 ]
