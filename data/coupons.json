@@ -12,5 +12,12 @@
     "discountType": "fixed",
     "discountValue": 50,
     "isActive": true
+  },
+  {
+    "id": 3,
+    "code": "FAYROUZA 26.02.2026",
+    "discountType": "fixed",
+    "discountValue": 100,
+    "isActive": true
   }
 ]
