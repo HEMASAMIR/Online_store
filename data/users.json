@@ -46,5 +46,13 @@
     "password": "9f54c8e60994682eacfe43a5bae2f79204de3a002f85a5af2a44dfe3f5105f53",
     "isAdmin": false,
     "createdAt": "2026-07-29T04:51:06.641Z"
+  },
+  {
+    "id": "1787319735303",
+    "name": "غاده صلاح احمد النويهي",
+    "email": "elnewihyghada@gmail.come",
+    "password": "c7c00fa15cfcc52eb6233d1aa0f5317b91b30218f074d5602c2f1769cad83f19",
+    "isAdmin": false,
+    "createdAt": "2026-08-21T13:42:15.303Z"
   }
 ]
