@@ -520,5 +520,28 @@
     "total": 2250,
     "date": "2026-08-20T15:31:41.347Z",
     "status": "completed"
+  },
+  {
+    "id": "ORD-138280-319",
+    "customerName": "سالي نبيل الموافي ",
+    "phone": "01201377126",
+    "address": "محافظة بورسعيد ابراج القنال الداخلي برج لؤلؤة نهضة مصر الدور الخامس شقه عشرين ",
+    "notes": "",
+    "items": [
+      {
+        "cartItemId": "25-none-none",
+        "id": 25,
+        "name": "كبسولات بي كومبليكس",
+        "price": 290,
+        "image": "https://raw.githubusercontent.com/HEMASAMIR/Online_store/main/public/uploads/1782358863755-6xu196y.jpeg",
+        "category": "فيتامينات ومكملات",
+        "size": "",
+        "color": "",
+        "quantity": 2
+      }
+    ],
+    "total": 680,
+    "date": "2026-08-31T14:55:38.280Z",
+    "status": "pending"
   }
 ]
