@@ -18,6 +18,6 @@
     "code": "FAYROUZA 26.02.2026",
     "discountType": "fixed",
     "discountValue": 100,
-    "isActive": false
+    "isActive": true
   }
 ]
