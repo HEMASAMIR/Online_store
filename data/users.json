@@ -62,5 +62,13 @@
     "password": "779b3851dd7c989b55f5b6e9fa44847e014d97941ca7e19412b5a74773b91dbb",
     "isAdmin": false,
     "createdAt": "2026-10-28T14:21:55.733Z"
+  },
+  {
+    "id": "1793219583139",
+    "name": "Peter mamdouh",
+    "email": "petermamdouh.55@gmail.com",
+    "password": "8347bc00d56fc8716d0808f51de934751cffe4ae9f8636bbf472ba556f18d1fb",
+    "isAdmin": false,
+    "createdAt": "2026-10-28T20:33:03.139Z"
   }
 ]
