@@ -668,5 +668,83 @@
     "total": 400,
     "date": "2026-11-17T06:36:29.252Z",
     "status": "pending"
+  },
+  {
+    "id": "ORD-738016-810",
+    "customerName": "محمود حمدي علي",
+    "phone": "01150666600",
+    "address": "الشرقيه العاشر من رمضان مجاوره 8 عمارة صيدلية نهي سلامه",
+    "notes": "",
+    "items": [
+      {
+        "cartItemId": "6-none-none",
+        "id": 6,
+        "name": "مزيل عرق براند باليا ",
+        "price": 300,
+        "image": "https://dpkwisgibj1m4fv6.public.blob.vercel-storage.com/uploads/1781722161130-cmkdfzg.jpeg",
+        "category": "مستلزمات شخصية",
+        "size": "",
+        "color": "",
+        "quantity": 1
+      },
+      {
+        "cartItemId": "12-none-none",
+        "id": 12,
+        "name": "مزيل عرق  رجالي ",
+        "price": 350,
+        "image": "https://dpkwisgibj1m4fv6.public.blob.vercel-storage.com/uploads/1781723332482-mw7qgoi.jpeg",
+        "category": "مستلزمات شخصية",
+        "size": "",
+        "color": "",
+        "quantity": 1
+      },
+      {
+        "cartItemId": "22-none-none",
+        "id": 22,
+        "name": "كولاجين ",
+        "price": 840,
+        "image": "https://dpkwisgibj1m4fv6.public.blob.vercel-storage.com/uploads/1781725115010-g4nrjf6.jpeg",
+        "category": "فيتامينات ومكملات",
+        "size": "",
+        "color": "",
+        "quantity": 1
+      },
+      {
+        "cartItemId": "41-none-none",
+        "id": 41,
+        "name": "كبسولات الكولاجين من دوبل هيرتز ",
+        "price": 600,
+        "image": "/client_images/product_41.jpeg",
+        "category": "عناية بالبشرة",
+        "size": "",
+        "color": "",
+        "quantity": 1
+      },
+      {
+        "cartItemId": "72-none-none",
+        "id": 72,
+        "name": "قهوة اسبريسو ",
+        "price": 750,
+        "image": "https://dpkwisgibj1m4fv6.public.blob.vercel-storage.com/uploads/1782252409433-g0ffi4k.jpeg",
+        "category": "أغذية صحية",
+        "size": "",
+        "color": "",
+        "quantity": 1
+      },
+      {
+        "cartItemId": "70-none-none",
+        "id": 70,
+        "name": "سيرم بيوتي كولاجين ",
+        "price": 550,
+        "image": "https://dpkwisgibj1m4fv6.public.blob.vercel-storage.com/uploads/1782252169859-i02vzpy.jpeg",
+        "category": "عناية بالبشرة",
+        "size": "",
+        "color": "",
+        "quantity": 1
+      }
+    ],
+    "total": 3490,
+    "date": "2026-11-17T06:42:18.016Z",
+    "status": "pending"
   }
 ]
