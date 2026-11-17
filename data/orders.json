@@ -645,5 +645,28 @@
     "total": 350,
     "date": "2026-11-08T20:36:25.082Z",
     "status": "pending"
+  },
+  {
+    "id": "ORD-389252-147",
+    "customerName": "محمود حمدي علي",
+    "phone": "01150666600",
+    "address": "الشرقيه العاشر من رمضان مجاوره 8 أمام مستر مانجو عمارة صيدلية نهي سلامه",
+    "notes": "",
+    "items": [
+      {
+        "cartItemId": "3-none-none",
+        "id": 3,
+        "name": "مزيل عرق ",
+        "price": 300,
+        "image": "https://dpkwisgibj1m4fv6.public.blob.vercel-storage.com/uploads/1781721850993-2i2flfg.jpeg",
+        "category": "مستلزمات شخصية",
+        "size": "",
+        "color": "",
+        "quantity": 1
+      }
+    ],
+    "total": 400,
+    "date": "2026-11-17T06:36:29.252Z",
+    "status": "pending"
   }
 ]
