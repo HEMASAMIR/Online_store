@@ -18,39 +18,30 @@
     "status": "approved"
   },
   {
-    "id": 4,
-    "productId": 18,
-    "userName": "حازم محمد ",
+    "id": 3,
+    "productId": 1,
+    "userName": "هدى مصطفى",
     "rating": 5,
-    "comment": "بصراحة منتج ممتاز والتعامل ممتاز وشكرا جدا للاسلوب والذوق في التعامل والتواصل معكم ",
-    "date": "2026-07-14T12:36:37.395Z",
+    "comment": "تونر تحفة وفارق جداً في صحة شعري وريحته هادية وجميلة.",
+    "date": "2026-06-13T16:39:43.322Z",
+    "status": "approved"
+  },
+  {
+    "id": 4,
+    "productId": 1,
+    "userName": "ياسمين علي",
+    "rating": 4,
+    "comment": "منتج ممتاز وأصلي 100% والتغليف ممتاز جداً.",
+    "date": "2026-06-14T10:15:00.000Z",
     "status": "approved"
   },
   {
     "id": 5,
-    "productId": 51,
-    "userName": "Sara",
+    "productId": 1,
+    "userName": "رانيا خالد",
     "rating": 5,
-    "comment": "ممتاز جداً و كويس لمرضي السكر كمان ",
-    "date": "2026-07-24T10:40:05.410Z",
-    "status": "approved"
-  },
-  {
-    "id": 6,
-    "productId": 22,
-    "userName": "ميرنا",
-    "rating": 5,
-    "comment": "تحفه بجد ❤️❤️",
-    "date": "2026-08-11T15:01:54.953Z",
-    "status": "approved"
-  },
-  {
-    "id": 7,
-    "productId": 72,
-    "userName": "Ahmed Hamed",
-    "rating": 5,
-    "comment": "قهوة ممتازة جدا بجد ❤️❤️❤️",
-    "date": "2026-08-12T21:18:45.457Z",
+    "comment": "أنصح بيه جداً، نتيجة سريعة وفرق ملحوظ في تساقط الشعر.",
+    "date": "2026-06-15T14:20:00.000Z",
     "status": "approved"
   }
 ]

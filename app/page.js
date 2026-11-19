@@ -4,10 +4,10 @@ import StoreFront from "./StoreFront";
 export const dynamic = "force-dynamic";
 
 const DEFAULT_SETTINGS = {
-  storeName: "Fayrouza Store",
-  whatsappNumber: "+201012345678",
-  shippingFee: 45,
-  facebookUrl: "https://www.facebook.com/share/1EE3VWigZ3/?mibextid=wwXIfr",
+  storeName: "Fayrouza Online Store",
+  whatsappNumber: "01095932981",
+  shippingFee: 100,
+  facebookUrl: "https://www.facebook.com/share/17ZV1WMDRQ/?mibextid=wwXIfr",
   freeShippingThreshold: 0,
 };
 
